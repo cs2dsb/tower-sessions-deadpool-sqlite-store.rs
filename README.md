@@ -3,9 +3,9 @@
 [![Crate](https://img.shields.io/crates/v/tower-sessions-deadpool-sqlite-store.svg)](https://crates.io/crates/tower-sessions-deadpool-sqlite-store)
 [![Documentation](https://docs.rs/tower-sessions-deadpool-sqlite-store/badge.svg)](https://docs.rs/tower-sessions-deadpool-sqlite-store)
 
-An implementation of `SessionStore` from [`tower-sessions`](https://github.com/maxcountryman/tower-sessions) that uses [deadpool-sqlite](hhttps://github.com/bikeshedder/deadpool) as the backing store.
+An implementation of `SessionStore` from [`tower-sessions`](https://github.com/maxcountryman/tower-sessions) that uses [`deadpool-sqlite`](https://github.com/bikeshedder/deadpool) as the backing store.
 
-It currently uses [serde_json](https://github.com/serde-rs/json) for serializing the session because I wanted them to be human readable for debugging purposes but it could be adapted to use something more compact if performance is a concern.
+It currently uses [`serde_json`](https://github.com/serde-rs/json) for serializing the session because I wanted them to be human readable for debugging purposes but it could be adapted to use something more compact if performance is a concern.
 
 ## Usage
 
