@@ -1,0 +1,22 @@
+[package]
+name = "tower-sessions-deadpool-sqlite-store"
+description = "deadpool-sqlite session store for `tower-sessions`"
+version = "0.1.0"
+edition = "2021"
+authors = [ "daniel_ <cs2dsb@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/cs2dsb/tower-sessions-deadpool-sqlite-store.rs"
+repositiory = "https://github.com/cs2dsb/tower-sessions-deadpool-sqlite-store.rs"
+keywords = [ "axum", "sessions", "tower", "rusqlite", "deadpool"]
+categories = ["asynchronous", "network-programming", "web-programming"]
+documentation = "https://docs.rs/tower-sessions-deadpool-sqlite-store"
+readme = "./README.md"
+
+[dependencies]
+deadpool-sqlite = { version = "0.7.0", features = [ "tracing" ] }
+deadpool = "^0.11.0"
+async-trait = "0.1.80"
+rusqlite = "0.30.0"
+thiserror = "1.0.60"
+tower-sessions = "0.12.2"
+serde_json = "^1.0"

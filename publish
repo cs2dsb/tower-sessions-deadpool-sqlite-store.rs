@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Exit when any command fails
+set -o errexit
+
+# Exit when an undeclared variable is used
+set -o nounset
+
+# Exit when a piped command returns a non-zero exit code
+set -o pipefail
+
+# Publish the package to crates.io
+
+readonly repo_dir="$( cd $(dirname ${BASH_SOURCE}); pwd )";
+cd $repo_dir
+
+cargo publish \
+    --dry-run \
+    -p tower-sessions-deadpool-sqlite-store
+
+read -r -p "About to publish to crates.io. Continue? [Y/n]" response
+response=${response,,}    # tolower
+if [[ "$response" =~ ^(yes|y|)$ ]]; then
+    cargo publish \
+        -p tower-sessions-deadpool-sqlite-store
+fi
